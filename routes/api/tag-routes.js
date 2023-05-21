@@ -35,7 +35,7 @@ router.get('/:id', async (req, res) => {
   // be sure to include its associated Product data
 
   try {
-    const tagFindOne = await TagfindByPk({
+    const TagFindOne = await Tag.findOne({
       where: {
         id: req.params.id
       },
@@ -45,11 +45,11 @@ router.get('/:id', async (req, res) => {
       },
       
     })
-   if (!tagFindOne) {
+   if (!TagFindOne) {
    res.status(404).json;
    return;
 }
-res.status(200).json(tagFindOne);
+res.status(200).json(TagFindOne);
   } catch (err) {
   res.status(500).json(err);
 }
@@ -62,7 +62,7 @@ router.post('/', async (req, res) => {
   // create a new tag
 
 try {
-  const tagCreate = await Tag.Create({
+  const tagCreate = await Tag.create({
     tag_name: req.body.tag_name
   })
   res.status(200).json(tagCreate);
@@ -77,12 +77,12 @@ router.put('/:id', async (req, res) => {
   // update a tag's name by its `id` value
 
  try {
-  const tagUpdate = await Tag.Create(req.body, {
+  const tagUpdate = await Tag.update(req.body, {
     where: {
       id: req.params.id
     },
   })
-  if (!tagUpdate[0]) {
+  if (tagUpdate[0] === 0){
     res.status(404).json({ message: 'No tag found  with that id!' });
     return;
   }
@@ -96,7 +96,7 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async(req, res) => {
   // delete on tag by its `id` value
 try {
-const tagDestroy = await Tag.Destroy({
+const tagDestroy = await Tag.destroy({
   where: {
     id: req.params.id
   }
@@ -111,20 +111,5 @@ res.status(500).json(err);
 }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-});
 
 module.exports = router;
