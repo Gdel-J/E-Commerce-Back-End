@@ -118,18 +118,29 @@ Finally, you will want to run `node server.js` to start the app.
 
 
 
-When the application starts:
+In insomnia:
 
-![Screenshot 1]
+-Categories
 
-
-
-
-![Screenshot 2]
+![Screenshot 1](https://github.com/Gdel-J/E-Commerce-Back-End/assets/120201085/0723b9ae-2962-4509-9329-05a5acd70eb0)
 
 
 
+-Products :
 
+![Screenshot 2](https://github.com/Gdel-J/E-Commerce-Back-End/assets/120201085/2354f1ff-c07d-4be2-9db7-cd9923042304)
+
+
+
+- Tags:
+
+![Screenshot 3](https://github.com/Gdel-J/E-Commerce-Back-End/assets/120201085/6b8af727-f3c6-43a4-a3d5-ae754b1b0743)
+
+
+
+Walkthrough video: 
+
+https://github.com/Gdel-J/E-Commerce-Back-End/assets/120201085/c35d26e3-a03a-486e-8563-3db6996887e2
 
 
 ## License
@@ -156,4 +167,4 @@ N/A
 
 ## Credits
 
-This application has been made by Gérard Del Vecchio during the UCF bootcamp program.
+This application has been made by Gérard Del Vecchio during the UCF bootcamp program,  a starter code was provided.
