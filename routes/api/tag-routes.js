@@ -4,8 +4,7 @@ const { Tag, Product, ProductTag } = require('../../models');
 // The `/api/tags` endpoint
 
 router.get('/', async (req, res) => {
-  // find all tags
-  // be sure to include its associated Product data
+  // find all tags with its associated Product data
 
  try {
     const tagData = await Tag.findAll({
@@ -31,8 +30,7 @@ router.get('/', async (req, res) => {
 
 
 router.get('/:id', async (req, res) => {
-  // find a single tag by its `id`
-  // be sure to include its associated Product data
+  // find a single tag by its `id` with its associated Product data
 
   try {
     const TagFindOne = await Tag.findOne({
